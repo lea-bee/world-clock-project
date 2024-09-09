@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock</title>
   </head>
   <body>
@@ -12,27 +14,23 @@
       <select>
         <option value="">Select a city..</option>
         <option value="">London</option>
-        <option value="">New York</option>
+        <option value="">Seoul</option>
         <option value="">Hong Kong</option>
       </select>
 
-      <div class="city">
+      <div class="city" id="chicago">
         <div>
-          <h2>San Fransico</h2>
-          <div class="date">September 7th 2024</div>
+          <h2>Chicago</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">
-          1:48:15 <small>PM</small> <br /><span>hours ahead/behind</span>
-        </div>
+        <div class="time"><br /><span>hours ahead/behind</span></div>
       </div>
-      <div class="city">
+      <div class="city" id="sydney">
         <div>
           <h2>Sydney</h2>
-          <div class="date">September 7th 2024</div>
+          <div class="date"></div>
         </div>
-        <div class="time">
-          1:48:15 <small>PM</small> <br /><span>hours ahead/behind</span>
-        </div>
+        <div class="time"><br /><span>hours ahead/behind</span></div>
       </div>
     </div>
     <footer>
@@ -43,10 +41,6 @@
       and is
       <a href="https://github.com/lea-bee/world-clock-project" target="_blank"
         >open-sourced on GitHub.</a
-      >
-      <a
-        href="https://www.vecteezy.com/vector-art/20500415-world-map-black-and-white-background-design"
-        >World Map Black And White Background Design Vectors by Vecteezy</a
       >
     </footer>
     <script src="javascript/index.js"></script>
