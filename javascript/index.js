@@ -43,12 +43,29 @@ function updateCity(event) {
       <h2>${cityName}</h2>
       <div class="date">${cityTime.format("MMMM	Do YYYY")}</div>
     </div>
-    <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
-    "A"
-  )}</small></div>
+    <div class="time"><span>${cityTime.format(
+      "h:mm:ss"
+    )} <small>${cityTime.format("A")}</small></span></div>
   </div>
+  <div class="zone"></div>
+  <a href = "/"><strong>All cities</strong></a>
   `;
 }
 
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
+
+function timeDifference(event) {
+  const localTime = moment();
+  const foreignTimezone = event.target.value;
+  const foreignTime = moment().tz(foreignTimezone);
+  let timeZoneInfoElement = document.querySelector(".zone");
+
+  const differenceInHours =
+    foreignTime.utcOffset() / 60 - localTime.utcOffset() / 60;
+
+  let timeZoneInfo = `<span><strong>${differenceInHours}</strong> hours difference</span>`;
+  timeZoneInfoElement.innerHTML = timeZoneInfo;
+}
+let citiesElement = document.querySelector("#city");
+citiesElement.addEventListener("change", timeDifference);

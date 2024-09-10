@@ -52,6 +52,8 @@ select {
 .time {
   font-size: 40px;
   font-weight: bold;
+  position: relative;
+  left: 135px;
 }
 .time small {
   font-size: 20px;
@@ -59,9 +61,25 @@ select {
   line-height: 36px;
 }
 .time span {
-  font-size: 14px;
+  font-size: 40px;
+  font-weight: bold;
   vertical-align: middle;
   line-height: 36px;
+  position: relative;
+  left: -140px;
+}
+
+.zone span {
+  position: relative;
+  top: -50px;
+  left: 450px;
+}
+a strong {
+  color: #fcb69f;
+}
+
+a {
+  color: black;
 }
 
 footer {
